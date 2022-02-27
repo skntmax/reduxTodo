@@ -1,5 +1,6 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import './App.css';
+import { TextField ,Button } from '@material-ui/core';
 import Home from './component/Home';
 import { useSelector } from 'react-redux' 
 import {increament,decrement} from './actions/index'
@@ -11,7 +12,7 @@ export default function Dashoboard() {
    
     const myState = useSelector((state)=>state.changeTheNumber)
     const dispatch = useDispatch() 
-  
+  const [name,setName] = useState('')
      return (
     <>
     <html className="h-full bg-gray-100">
@@ -155,6 +156,12 @@ export default function Dashoboard() {
   </header>
   
   <main>
+     
+  <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={e=> setName(e.target.value) } />
+<TextField id="filled-basic" label="Filled" variant="filled"  onChange={e=> setName(e.target.value) } />
+<TextField id="standard-basic" label="Standard" variant="standard" onChange={e=> setName(e.target.value) } />
+<Button color="primary" varient=""  onClick={()=>{ alert(name) }}>Click me  </Button>
+      
     <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       {/* <!-- Replace with your content --> */}
 
