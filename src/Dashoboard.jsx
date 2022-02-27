@@ -1,6 +1,6 @@
-import React ,{useState} from 'react'
-import './App.css';
+import React ,{useEffect, useState} from 'react'
 import { TextField ,Button } from '@material-ui/core';
+import axios from 'axios';
 import Home from './component/Home';
 import { useSelector } from 'react-redux' 
 import {increament,decrement} from './actions/index'
@@ -12,13 +12,17 @@ export default function Dashoboard() {
    
     const myState = useSelector((state)=>state.changeTheNumber)
     const dispatch = useDispatch() 
-  const [name,setName] = useState('')
-     return (
-    <>
+    const [name,setName] = useState('')
+   
+
+
+  return (
+     <> 
+
+
     <html className="h-full bg-gray-100">
   <body className="h-full">
-  ```
-{/* --> */}
+
 <div className="min-h-full">
   <nav className="bg-gray-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,6 +189,9 @@ export default function Dashoboard() {
       {/* <!-- /End replace --> */}
     </div>
   </main>
+
+ {/* {fakeData} */}
+  
 </div>
 </body>
 </html>
