@@ -13,9 +13,12 @@ export default function Dashoboard() {
     const myState = useSelector((state)=>state.changeTheNumber)
     const dispatch = useDispatch() 
     const [name,setName] = useState('')
-   
-
-
+  
+    useEffect(()=>{
+       
+       console.log("component unmounted ");
+    })
+ 
   return (
      <> 
 

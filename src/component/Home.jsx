@@ -43,8 +43,8 @@ export default function Home() {
           </>
         )
       })
-      
       :"" }
+      
    <ReactPaginate
    previousLabel="Previous"
    NextLabel="Next"
