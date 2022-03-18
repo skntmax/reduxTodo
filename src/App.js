@@ -8,16 +8,17 @@ import {increament,decrement} from './actions/index'
 import { useDispatch } from 'react-redux';
 import Dashoboard from './Dashoboard';
 // import Test from './Test';
+import Selectproduct from './Selectproduct';
 function App() {
   const myState = useSelector((state)=>state.changeTheNumber )
    const dispatch = useDispatch()
     return ( 
       <React.Fragment>
        
-    <Home />
+    
      {/* <Dashoboard/> */}
      
-           
+           <Selectproduct />
          </React.Fragment>
 
     );
