@@ -28,3 +28,16 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+
+.container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    width: 50%;
+    margin: 100px;
+}
