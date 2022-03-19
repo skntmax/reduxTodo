@@ -36,8 +36,9 @@ export default function FormValidation() {
   }
 
   const validationSchema = yup.object().shape({
-    name:yup.string().required("please Enter your name ") ,
-    email:yup.string().required("please Enter your email ") ,
+    name:yup.string().required("please Enter your name ").min(4 ,"Too short!").max(10 , "Too Long ! ") ,
+    email:yup.string().required("please Enter your email ").
+    matches( /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ,"Invalid Email") ,
     password:yup.string().required("please Enter password ") ,
 
   }) 
