@@ -11,6 +11,8 @@ import Dashoboard from './Dashoboard';
 import Selectproduct from './Selectproduct';
 import FormValidation from './FormValidation';
 import Todo from './Todo';
+import ImageUpload from './component/ImageUpload';
+import CssPlaceholder from './component/cardHover/CssPlaceholder';
 function App() {
   const myState = useSelector((state)=>state.changeTheNumber )
    const dispatch = useDispatch()
@@ -21,7 +23,13 @@ function App() {
      {   /* <Selectproduct /> */ }
           { /* <FormValidation />  */ }
            
-           <Todo />
+        {    /* <Todo /> */   }
+            
+      { /* <ImageUpload />   */ }
+    
+   <CssPlaceholder />
+
+
          </React.Fragment>
 
     );

@@ -54,12 +54,12 @@ button {
     z-index: -1;
 }
 
-.todo {
+.todo ,.cssContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.itemDiv {
+.itemDiv,.cssItem {
     justify-content: space-around;
 }
